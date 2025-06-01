@@ -1,0 +1,133 @@
+:root {
+  --bleu-eau: #cce7ff;
+  --bleu-fonce: #005f99;
+  --rouge-touche: #ff4d4d;
+  --blanc-manque: #f8f8f8;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("svg/mer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px black;
+}
+
+.grilles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(10, 36px);
+  grid-template-rows: repeat(10, 36px);
+  gap: 3px;
+  background: #e0f7ff;
+  padding: 10px;
+  border: 2px solid #003f5c;
+  border-radius: 12px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cell {
+  width: 36px;
+  height: 36px;
+  background-color: var(--bleu-eau);
+  border: 1px solid #a0c4ff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  background-size: cover;
+  background-position: center;
+}
+
+.cell:hover {
+  background-color: #b3d9ff;
+}
+
+.bateau {
+  background-image: url("svg/bateau.png");
+}
+
+.touche {
+  background-color: var(--rouge-touche);
+  animation: boom 0.3s ease-in-out;
+}
+
+.manque {
+  background-color: var(--blanc-manque);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@keyframes boom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#status {
+  font-size: 1.2rem;
+  color: #003f5c;
+  padding: 10px 20px;
+  background-color: #ffffffbb;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  text-align: center;
+}
+
+#score {
+  font-size: 1.1rem;
+  color: white;
+  margin-top: 10px;
+  text-shadow: 1px 1px black;
+}
+
+#rejouer-btn {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #005f99;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#rejouer-btn:hover {
+  background-color: #004470;
+}

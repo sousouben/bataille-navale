@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bataille Navale</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Bataille Navale</h1>
+    <div class="grilles">
+      <div>
+        <h2>Votre grille</h2>
+        <div id="grille-joueur" class="grille"></div>
+      </div>
+      <div>
+        <h2>Grille ennemie</h2>
+        <div id="grille-ordi" class="grille"></div>
+      </div>
+    </div>
+    <p id="status"></p>
+    <p id="score"></p>
+    <button id="rejouer-btn" type="button" style="display: none">
+      Rejouer
+    </button>
+    <audio id="hit-sound" preload="auto">
+      <source src="bruitage/boom.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas l'audio.
+    </audio>
+    <script src="script.js" defer></script>
+  </body>
+</html>
